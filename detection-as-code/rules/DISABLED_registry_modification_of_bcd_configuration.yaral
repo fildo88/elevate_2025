@@ -1,0 +1,33 @@
+rule DISABLED_registry_modification_of_bcd_configuration {
+ meta:
+    snapattack_identifier = "04e7fc29-406c-4c2d-a6fa-e579850daa5e"
+    snapattack_url = "https://snapa.tk/d/zo70A"
+    snapattack_integration_guid = "1f60353f-7400-4770-97e9-f6fbd6ea2f6b"
+    snapattack_compilation_target = "53"
+    author = "Tim Nary"
+    description = "This detection alerts on changes to the Boot Configuration Data (BCD) on Windows systems typically made by threat actors and ransomware groups to inhibit system recovery.The BCD is stored in the registry hive HKLM\\BCD00000000 on the boot partition of the Windows drive.The bootstatuspolicy parameter (0x250000e0) determines whether the system will boot normally, or enter into the Windows Recovery Environment if there is a failed shutdown, failed boot, or other error during the startup process. Threat actors disable this in order to prevent system administrators from accessing the System Image Recovery feature.The recoveryenabled parameter (0x16000009) can disable the Windows Recovery Environment entirely. Changing the boot status policy with the previous command will stop the boot loader from loading the recovery environment when there are startup errors, but this setting will prevent system administrators from loading it manually.The safeboot parameter (0x25000080) determines whether the system will boot into Safe Mode the next time it is restarted. Adversaries typically don't modify this value to prevent recovery, rather prevent detection as not all EDR and AV software will be running in Safe Mode. For example, Windows Defender does not run in Safe Mode."
+    reference = ""
+    version = "0.01"
+    created = "2024-04-08"
+    category = "registry_creation_deletion"
+    product = "windows"
+    service = "sysmon"
+    mitre = "t1562.009, t1490, defense_evasion, execution, exfiltration, impact, initial_access, persistence, privilege_escalation, t1003.001, t1012, t1018, t1021.001, t1021.002, t1047, t1053, t1059.003, t1059, t1068, t1070.004, t1070, t1083, t1112, t1136.001, t1136, t1218.005, t1485, t1486, t1491, t1543.003, t1547.001, t1562.001, t1562.004, t1562, t1566.001, t1569.002, t1569, t1608.001, mandiant.actors.unc2900, mandiant.actors.unc1733, mandiant.actors.unc4120, g0102, mandiant.actors.fin12, mandiant.actors.temp.mixmaster, mandiant.actors.unc2021, g0034, g0092, mandiant.actors.fin11, mandiant.actors.unc2914, mandiant.actors.unc3944, mandiant.actors.unc4681, mandiant.actors.temp.hermit, mandiant.actors.unc2554, g0119, mandiant.actors.unc3753, g0037, mandiant.actors.fin6, g0069, mandiant.actors.temp.zagros, mandiant.actors.unc1714, mandiant.actors.unc2190, mandiant.actors.unc1695, mandiant.actors.unc1543, mandiant.actors.unc2628, mandiant.actors.unc4696, mandiant.actors.unc1585, mandiant.actors.unc4721, mandiant.actors.unc4273, mandiant.actors.unc4896, mandiant.actors.unc1685, mandiant.actors.unc1379, mandiant.actors.unc2529, mandiant.actors.unc2758, mandiant.actors.unc1997, mandiant.actors.unc5348, mandiant.actors.unc2727, g0115, g0046, mandiant.actors.fin7, mandiant.actors.unc3319, mandiant.actors.unc961, mandiant.actors.apt44, mandiant.actors.apt44._sandworm.team, mandiant.actors.unc2465, g0032, mandiant.actors.temp.hermit, mandiant.actors.unc2165, mandiant.actors.unc3507, mandiant.actors.unc3622, mandiant.actors.unc3313, mandiant.software.powershell, s0365, mandiant.software.sourapple, mandiant.software.sourcherry, mandiant.software.sourgrapes, mandiant.software.sourpear, mandiant.software.suncrypt, s1068, mandiant.software.alphv, mandiant.software.lockbit, mandiant.software.gmer, mandiant.software.suncrypt.pushclouds, mandiant.software.hivelocker, mandiant.software.inc, mandiant.software.cactus, mandiant.software.doppelpaymer, mandiant.software.atomic, mandiant.software.atomicredteam, mandiant.software.daveshell, mandiant.software.medusalocker, mandiant.software.ransomexx, s0496, mandiant.software.sodinokibi"
+
+  events:
+  (
+    (
+      $Section_1.metadata.event_type = "REGISTRY_CREATION"
+      or $Section_1.metadata.event_type = "REGISTRY_DELETION"
+    )
+    and re.regex($Section_1.target.registry.registry_key, `\\machine\\BCD00000000\\Objects\\`) nocase
+    and (
+      re.regex($Section_1.target.registry.registry_key, `25000080`) nocase
+      or re.regex($Section_1.target.registry.registry_key, `250000e0`) nocase
+      or re.regex($Section_1.target.registry.registry_key, `16000009`) nocase
+    )
+  )
+
+  condition:
+    $Section_1
+}

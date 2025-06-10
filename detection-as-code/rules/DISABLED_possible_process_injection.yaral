@@ -1,0 +1,29 @@
+rule DISABLED_possible_process_injection {
+ meta:
+    snapattack_identifier = "8d80b25e-8787-4e69-842f-0096dee3831f"
+    snapattack_url = "https://snapa.tk/d/GBP3P"
+    snapattack_integration_guid = "1f60353f-7400-4770-97e9-f6fbd6ea2f6b"
+    snapattack_compilation_target = "53"
+    author = "Trenton Tait"
+    description = "Detects a process creating a remote thread into processes commonly used for process injection. Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. This detection only covers common choices for process injection and won't catch everything."
+    reference = ""
+    version = "0.01"
+    created = "2024-04-09"
+    category = "create_remote_thread"
+    product = "windows"
+    mitre = "t1055, command_and_control, defense_evasion, privilege_escalation, t1033, t1049, t1055.003, t1055.004, t1057, t1059.001, t1608.001, mandiant.actors.apt9, mandiant.actors.unc2727, mandiant.actors.unc3658, g0025, mandiant.actors.apt17, mandiant.actors.unc4407, mandiant.actors.conimes.team, g0050, mandiant.actors.apt32, mandiant.actors.unc2565, mandiant.actors.unc118, g0065, mandiant.actors.apt40, mandiant.actors.unc212, mandiant.actors.unc302, mandiant.actors.unc616, mandiant.actors.unc2198, g0079, mandiant.actors.unc754, g0052, mandiant.actors.temp.omega, mandiant.actors.unc2529, g0026, mandiant.actors.apt18, mandiant.actors.unc2978, mandiant.actors.temp.hermit, mandiant.actors.unc2554, g0027, mandiant.actors.apt27, mandiant.actors.unc215, mandiant.actors.temp.shadow, g0096, mandiant.actors.apt41, mandiant.actors.unc3008, mandiant.actors.unc3808, mandiant.actors.unc3944, g0006, mandiant.actors.apt1, g0129, mandiant.actors.temp.hex, mandiant.actors.unc251, mandiant.actors.unc4536, mandiant.actors.apt44, g0102, mandiant.actors.fin12, mandiant.actors.temp.mixmaster, mandiant.actors.unc961, g0087, mandiant.actors.apt39, g0092, mandiant.actors.fin11, mandiant.actors.unc3525, mandiant.actors.temp.metastrike, mandiant.actors.temp.splinter, g0114, mandiant.actors.unc1003, mandiant.actors.unc3622, mandiant.actors.unc3753, mandiant.actors.apt22, g0080, g0046, mandiant.actors.fin7, mandiant.actors.unc3319, mandiant.actors.unc2970, mandiant.actors.apt43, mandiant.actors.unc3236, mandiant.actors.unc2934, mandiant.actors.apt20, mandiant.actors.unc2524, mandiant.actors.unc3443, mandiant.actors.unc2053, mandiant.actors.unc872, mandiant.actors.unc1695, mandiant.actors.unc4696, mandiant.actors.unc1543, g0119, g0016, mandiant.actors.apt29, mandiant.actors.unc3890, g0037, mandiant.actors.fin6, g0064, mandiant.actors.apt33, g0143, mandiant.actors.unc1585, g0045, mandiant.actors.apt10, mandiant.actors.unc623, mandiant.actors.unc2743, mandiant.actors.unc4273, mandiant.actors.unc2165, mandiant.actors.unc1733, mandiant.actors.unc2900, mandiant.actors.unc4393, mandiant.actors.unc4736, mandiant.actors.unc1078, g0069, mandiant.actors.temp.zagros, g1014, mandiant.software.metasploit, mandiant.software.meterpreter, mandiant.software.mettle, mandiant.software.adfind, mandiant.software.beacon, mandiant.software.cobaltstrike, mandiant.software.dustcover, mandiant.software.handle, s0106, mandiant.software.cmdexe, s0057, s1063, mandiant.software.boldbadger, mandiant.software.brc4, mandiant.software.tailstrike, s0046, mandiant.software.cozycar, mandiant.software.colorfake, mandiant.software.colorfake.v2, mandiant.software.crossc2, mandiant.software.atomicredteam, mandiant.software.beacon, mandiant.software.dustcover, mandiant.software.metasploit, mandiant.software.powershell, mandiant.software.phoshow, mandiant.software.daveshell, mandiant.software.atomic"
+
+  events:
+  (
+    (
+      re.regex($Section_1.target.process.file.full_path, `\\Device\\HarddiskVolume.*\\Windows\\System32\\svchost\.exe`) nocase
+      or re.regex($Section_1.target.process.file.full_path, `\\Device\\HarddiskVolume.*\\Windows\\System32\\notepad\.exe`) nocase
+      or re.regex($Section_1.target.process.file.full_path, `\\Device\\HarddiskVolume.*\\Windows\\System32\\calc\.exe`) nocase
+      or re.regex($Section_1.target.process.file.full_path, `powershell\.exe$`) nocase
+    )
+    and not re.regex($Section_1.target.process.file.full_path, `\\csrss\.exe$`) nocase
+  )
+
+  condition:
+    $Section_1
+}

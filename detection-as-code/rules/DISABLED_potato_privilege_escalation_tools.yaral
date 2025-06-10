@@ -1,0 +1,55 @@
+rule DISABLED_potato_privilege_escalation_tools {
+ meta:
+    snapattack_identifier = "cfde2a20-3737-4760-8498-16e1e6d1672d"
+    snapattack_url = "https://snapa.tk/d/W3ok6"
+    snapattack_integration_guid = "1f60353f-7400-4770-97e9-f6fbd6ea2f6b"
+    snapattack_compilation_target = "53"
+    author = "Trenton Tait"
+    description = "Detects execution of known *Potato privilege escalation tools. These usually abuse access token manipulation to gain SYSTEM level privileges. "
+    reference = ""
+    version = "0.01"
+    created = "2024-04-08"
+    category = "process_creation"
+    product = "windows"
+    mitre = "t1068, t1134, t1134.001, mandiant.software.badpotato, mandiant.software.efspotato, snapsoftware.godpotato, snapsoftware.juicypotato, snapsoftware.juicypotato, snapsoftware.rottenpotato, snapsoftware.sweetpotato, mandiant.software.sweetpotato"
+
+  events:
+  (
+    $Section_1.metadata.event_type = "PROCESS_LAUNCH"
+    and (
+      (
+        re.regex($Section_1.principal.process.file.full_path, `GodPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `SweetPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `HotPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `RottenPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `RoguePotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `SharpPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `JuicyPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `LonelyPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `GenericPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `GhostPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `CertPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `LocalPotato`) nocase
+        or re.regex($Section_1.principal.process.file.full_path, `CoercedPotato`) nocase
+      )
+      or (
+        re.regex($Section_1.target.process.file.full_path, `GodPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `SweetPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `HotPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `RottenPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `RoguePotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `SharpPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `JuicyPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `LonelyPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `GenericPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `GhostPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `CertPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `LocalPotato`) nocase
+        or re.regex($Section_1.target.process.file.full_path, `CoercedPotato`) nocase
+      )
+    )
+  )
+
+  condition:
+    $Section_1
+}

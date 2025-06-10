@@ -1,0 +1,253 @@
+rule DISABLED_malicious_powershell_scripts__poshmodule {
+ meta:
+    snapattack_identifier = "8b8cc76e-d9fb-4d3f-b95f-efde34d95454"
+    snapattack_url = "https://snapa.tk/d/Wneed"
+    snapattack_integration_guid = "1f60353f-7400-4770-97e9-f6fbd6ea2f6b"
+    snapattack_compilation_target = "152"
+    author = "frack113, Nasreddine Bencherchali"
+    description = "Detects the execution of known offensive powershell scripts used for exploitation or reconnaissance"
+    reference = ""
+    version = "0.01"
+    created = "2023/01/23"
+    product = "windows"
+    service = "powershell"
+    mitre = "t1491.001, mandiant.software.powershell"
+
+  events:
+  (
+    (
+      $selection_generic.metadata.product_event_type = "4104"
+      and (
+        re.regex($selection_generic.security_result.detection_fields.value, `Add-ConstrainedDelegationBackdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Add-Exfiltration\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Add-Persistence\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Add-RegBackdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Add-RemoteRegBackdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Add-ScrnSaveBackdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Check-VM\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `ConvertTo-ROT13\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Copy-VSS\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Create-MultipleSessions\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `DNS_TXT_Pwnage\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Do-Exfiltration\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `DomainPasswordSpray\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Download_Execute\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Download-Execute-PS\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Enabled-DuplicateToken\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Enable-DuplicateToken\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Execute-Command-MSSQL\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Execute-DNSTXT-Code\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Execute-OnTime\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `ExetoText\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Exploit-Jboss\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Find-AVSignature\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Find-Fruit\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Find-GPOLocation\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Find-TrustedDocuments\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `FireBuster\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `FireListener\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-ApplicationHost\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-ChromeDump\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-ClipboardContents\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-ComputerDetail\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-FoxDump\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-GPPAutologon\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-GPPPassword\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-IndexedItem\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-Keystrokes\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-LSASecret\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-MicrophoneAudio\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-PassHashes\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-PassHints\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-RegAlwaysInstallElevated\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-RegAutoLogon\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-RickAstley\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-Screenshot\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-SecurityPackages\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-ServiceFilePermission\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-ServicePermission\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-ServiceUnquoted\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-SiteListPassword\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-System\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-TimedScreenshot\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-UnattendedInstallFile\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-Unconstrained\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-USBKeystrokes\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-VaultCredential\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-VulnAutoRun\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-VulnSchTask\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-WebConfig\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-WebCredentials\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Get-WLAN-Keys\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Gupt-Backdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `HTTP-Backdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `HTTP-Login\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Install-ServiceBinary\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Install-SSP\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ACLScanner\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ADSBackdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-AmsiBypass\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ARPScan\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-BackdoorLNK\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-BadPotato\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-BetterSafetyKatz\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-BruteForce\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-BypassUAC\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Carbuncle\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Certify\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ConPtyShell\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-CredentialInjection\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-CredentialsPhish\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-DAFT\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-DCSync\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Decode\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-DinvokeKatz\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-DllInjection\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-DowngradeAccount\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-EgressCheck\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Encode\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-EventViewer\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Eyewitness\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-FakeLogonScreen\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Farmer\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Get-RBCD-Threaded\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Gopher\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Grouper2\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Grouper3\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-HandleKatz\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Interceptor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Internalmonologue\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Inveigh\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-InveighRelay\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-JSRatRegsvr\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-JSRatRundll\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-KrbRelay\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-KrbRelayUp\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-LdapSignCheck\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Lockless\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-MalSCCM\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Mimikatz\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-MimikatzWDigestDowngrade\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Mimikittenz\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-MITM6\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-NanoDump\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-NetRipper\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-NetworkRelay\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-NinjaCopy\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-OxidResolver\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-P0wnedshell\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-P0wnedshellx86\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Paranoia\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PortScan\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PoshRatHttp\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PoshRatHttps\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PostExfil\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerDump\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerShellIcmp\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerShellTCP\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerShellTcpOneLine\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerShellTcpOneLineBind\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerShellUdp\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerShellUdpOneLine\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerShellWMI\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PowerThIEf\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PPLDump\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Prasadhak\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PsExec\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PsGcat\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PsGcatAgent\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PSInject\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-PsUaCme\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ReflectivePEInjection\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ReverseDNSLookup\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Rubeus\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-RunAs\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-SafetyKatz\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-SauronEye\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-SCShell\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Seatbelt\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ServiceAbuse\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-SessionGopher\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ShellCode\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-SMBScanner\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Snaffler\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Spoolsample\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-SSHCommand\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-SSIDExfil\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-StandIn\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-StickyNotesExtract\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Tater\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Thunderfox\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-ThunderStruck\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-TokenManipulation\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Tokenvator\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-TotalExec\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-UrbanBishop\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-UserHunter\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-VoiceTroll\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Whisker\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-WinEnum\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-winPEAS\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-WireTap\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-WmiCommand\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-WScriptBypassUAC\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Invoke-Zerologon\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Keylogger\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `MailRaider\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `New-HoneyHash\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `OfficeMemScraper\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Offline_Winpwn\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-CHM\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-DnsTxt\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-Excel\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-HTA\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-Java\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-JS\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-Minidump\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-RundllCommand\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-SCF\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-SCT\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-Shortcut\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-WebQuery\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Out-Word\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Parse_Keys\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Port-Scan\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `PowerBreach\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `powercat\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `PowerRunAsSystem\.psm1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `PowerSharpPack\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `PowerUp\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `PowerUpSQL\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `PowerView\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `PSAsyncShell\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `RemoteHashRetrieval\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Remove-Persistence\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Remove-PoshRat\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Remove-Update\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Run-EXEonRemote\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Schtasks-Backdoor\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Set-DCShadowPermissions\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Set-MacAttribute\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Set-RemotePSRemoting\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Set-RemoteWMI\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Set-Wallpaper\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Show-TargetScreen\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Speak\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Start-CaptureServer\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `Start-WebcamRecorder\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `StringToBase64\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `TexttoExe\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `VolumeShadowCopyTools\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `WinPwn\.ps1`) nocase
+        or re.regex($selection_generic.security_result.detection_fields.value, `WSUSpendu\.ps1`) nocase
+      )
+    )
+    or (
+      re.regex($selection_generic.metadata.product_event_type, `Invoke-Sharp`) nocase
+      and re.regex($selection_generic.metadata.product_event_type, `\.ps1`) nocase
+    )
+  )
+
+  condition:
+    $selection_generic
+}

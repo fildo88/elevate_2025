@@ -1,0 +1,9 @@
+cidr_rfc_1918:
+  description: Last updated, 20240809
+  resource_name: projects/secops-lab-lowe-01/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/referenceLists/cidr_rfc_1918
+  revision_create_time: '2024-08-09T13:02:23.381567Z'
+  rule_associations_count: 2
+  rules:
+  - projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_25bb642e-c210-4f4c-8718-01809262f616
+  - projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_807e61ac-8b95-40ca-a55f-d62142f4fe31
+  syntax_type: REFERENCE_LIST_SYNTAX_TYPE_CIDR

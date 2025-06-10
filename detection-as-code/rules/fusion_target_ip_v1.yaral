@@ -1,0 +1,49 @@
+rule fusion_target_ip_v1 {
+
+    meta:
+        author = "thatsiemguy@"
+        description = "Matches external (non-RFC1918) UDM Target IP addresses against UDM Network Metadata Event Types.  Only match MATI Confidence Score of 80 and above."
+        priority = "HIGH"
+        severity = "MEDIUM"
+
+    events:
+        //UDM event types that will populate a principal and target IP address
+        (
+            $e.metadata.event_type = "NETWORK_CONNECTION" or
+            $e.metadata.event_type = "NETWORK_DNS" or
+            $e.metadata.event_type = "NETWORK_HTTP" or
+            $e.metadata.event_type = "NETWORK_FLOW"
+        )
+        // match only target IP addresses that are not RFC1918
+        (
+            $e.target.ip != ""
+            and not $e.target.ip in cidr %cidr_rfc_1918
+            and $dip = $e.target.ip
+        )
+        $e.principal.ip = $sip
+
+        // Filter graph
+        $g.graph.metadata.product_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.vendor_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.entity_type = "IP_ADDRESS"
+        $g.graph.metadata.source_type = "GLOBAL_CONTEXT"
+        $dip = $g.graph.entity.ip
+
+    match:
+        $dip over 15m
+
+    outcome:
+        // Extract the Mandiant Automated Intel confidence score of maliciousness
+        $confidence_score = max(if($g.graph.metadata.threat.verdict_info.source_provider = "Mandiant Automated Intel", $g.graph.metadata.threat.verdict_info.confidence_score, 0))
+
+        // Extract the status of the indicator as seen in a breached environment
+        $breached = max(if($g.graph.metadata.threat.verdict_info.pwn = true, 1, 0))
+
+        // Intermediary outcome variable to combine conditions of intelligence extracted in the previous outcome variables.
+        // Return 1 if conditions are met, otherwise return 0.
+        $matched_conditions = if($confidence_score >= 80 AND $breached = 1, 1, 0)
+
+    condition:
+        // Ensure $e1, $context_graph and $matched_conditions conditions are met.
+        $e and $g and $matched_conditions = 1
+}

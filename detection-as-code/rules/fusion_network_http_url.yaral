@@ -1,0 +1,43 @@
+rule fusion_network_http_url {
+
+    meta:
+        author = "thatsiemguy@"
+        description = "Matches Fusion URL IOCs against UDM Network HTTP events."
+        priority = "HIGH"
+        severity = "MEDIUM"
+
+    events:
+        $e.metadata.event_type = "NETWORK_HTTP"
+        // match URL with or without protocol
+        (
+            $e.target.url != "" 
+            and re.regex($e.target.url, `[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)`)
+        )
+
+        // Filter graph
+        $g.graph.metadata.product_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.vendor_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.entity_type = "URL"
+        $g.graph.metadata.source_type = "GLOBAL_CONTEXT"
+
+        $ioc = $e.target.url
+        $ioc = $g.graph.entity.url
+
+    match:
+        $ioc over 1h
+
+    outcome:
+        // Extract the Mandiant Automated Intel confidence score of maliciousness
+        $confidence_score = max(if($g.graph.metadata.threat.verdict_info.source_provider = "Mandiant Automated Intel", $g.graph.metadata.threat.verdict_info.confidence_score, 0))
+
+        // Extract the status of the indicator as seen in a breached environment
+        $breached = max(if($g.graph.metadata.threat.verdict_info.pwn = true, 1, 0))
+
+        // Intermediary outcome variable to combine conditions of intelligence extracted in the previous outcome variables.
+        // Return 1 if conditions are met, otherwise return 0.
+        $matched_conditions = if($confidence_score >= 80 AND $breached = 1, 1, 0)
+
+    condition:
+        // Ensure $e, $g and $matched_conditions conditions are met.
+        $e and $g and $matched_conditions = 1
+}

@@ -1,0 +1,45 @@
+rule PL_ttp_PowerShell_ObfuscatedInvocation {
+  internal_meta:
+    rule_id = "8a753728-1645-47bc-93ff-90ed371d801f"
+    author = "Uppercase"
+    uc_author = "mosesschwartz"
+    uc_notify = "buganizer"
+    strategy = "PowerShell invocation with unusual capitalization may indicate attempts at obfuscation. Developed as a simple example to be used for demonstrating alert development."
+    type = "customer_alert"
+    data_source = "EDR"
+    assumptions = "Assumes that unusual capitalization may indicate attempts at obfuscation."
+    platform = "Windows"
+    slot_usage = "0.0120"
+
+  customer_meta:
+    rule_name = "Obfuscated or unusual PowerShell Invocation."
+    description = "PowerShell invocation with unusual capitalization may indicate attempts at obfuscation."
+    severity = "Low"
+    tactic = "TA0002"
+    technique = "T1059"
+
+  events:
+    $e.metadata.event_type = "PROCESS_LAUNCH"
+    // Match any command line containing powershell or "pwsh "
+    $e.principal.process.command_line = /powershell|pwsh / nocase
+
+    // Exclude the normal capitalizations
+    not re.regex($e.principal.process.command_line,
+                 "(pwsh|PWSH|powershell|PowerShell|POWERSHELL|PowerShell|powerShell|Powershell)")
+
+    // Exclude anything with ExecutionPolicy RemoteSigned
+    $e.principal.process.command_line != /ExecutionPolicy RemoteSigned/
+
+    // Ensure there's an ".exe" in the file path to exclude non-Windows results
+    $e.principal.process.file.full_path = /\.exe/ nocase
+
+  outcome:
+    $risk_score = 35
+    $hostname = $e.principal.hostname
+    $principal_process_file_path = $e.principal.process.file.full_path
+
+    $vendor_name = array_distinct($e.metadata.vendor_name)
+    $product_name = array_distinct($e.metadata.product_name)
+  condition:
+    $e
+}

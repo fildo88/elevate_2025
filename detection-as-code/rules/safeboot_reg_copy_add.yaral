@@ -1,0 +1,27 @@
+rule safeboot_reg_copy_add {
+  meta:
+    author = "Google SecOps Gemini"
+    description = "A process is launched with command line containing \"SYSTEM\\CurrentControlSet\\Control\\SafeBoot\" and target process is reg.exe or principal process is reg.exe and target process command line contains \"copy\" or \"add\""
+    severity = "LOW"
+
+  events:
+    (
+      $e.metadata.event_type = "PROCESS_LAUNCH" AND
+      re.regex($e.principal.process.command_line, `SYSTEM\\CurrentControlSet\\Control\\SafeBoot/ nocase`) AND
+      (
+        $e.target.process.file.full_path = /reg\.exe$/ nocase OR
+        $e.principal.process.file.full_path = /reg\.exe$/ nocase
+      )
+    ) AND
+    (
+      $e.target.process.command_line = /copy/ nocase OR
+      $e.target.process.command_line = /add/ nocase
+    )
+  outcome:
+    $process_name = $e.principal.process.file.full_path
+    $process_command_line = $e.principal.process.command_line
+    $target_process_name = $e.target.process.file.full_path
+    $target_process_command_line = $e.target.process.command_line
+  condition:
+    $e
+}

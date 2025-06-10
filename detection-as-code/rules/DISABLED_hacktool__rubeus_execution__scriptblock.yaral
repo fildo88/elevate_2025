@@ -1,0 +1,37 @@
+rule DISABLED_hacktool__rubeus_execution__scriptblock {
+ meta:
+    snapattack_identifier = "7df8eb18-f4e0-4e19-a313-9686c50602ed"
+    snapattack_url = "https://snapa.tk/d/GdBgy"
+    snapattack_integration_guid = "1f60353f-7400-4770-97e9-f6fbd6ea2f6b"
+    snapattack_compilation_target = "152"
+    author = "Christian Burkard (Nextron Systems), Florian Roth (Nextron Systems)"
+    description = "Detects the execution of the hacktool Rubeus using specific command line flags"
+    reference = ""
+    version = "0.01"
+    created = "2023/04/27"
+    product = "windows"
+    category = "ps_script"
+    mitre = "credential_access, t1003, t1558.003, lateral_movement, t1550.003"
+
+  events:
+  (
+    re.regex($selection.security_result.detection_fields.value, `asreproast `) nocase
+    or re.regex($selection.security_result.detection_fields.value, `dump /service:krbtgt `) nocase
+    or re.regex($selection.security_result.detection_fields.value, `dump /luid:0x`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `kerberoast `) nocase
+    or re.regex($selection.security_result.detection_fields.value, `createnetonly /program:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `ptt /ticket:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `/impersonateuser:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `renew /ticket:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `asktgt /user:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `harvest /interval:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `s4u /user:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `s4u /ticket:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `hash /password:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `golden /aes256:`) nocase
+    or re.regex($selection.security_result.detection_fields.value, `silver /user:`) nocase
+  )
+
+  condition:
+    $selection
+}

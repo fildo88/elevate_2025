@@ -1,0 +1,33 @@
+rule mati_fusion_industry_gov_ioc {
+
+    meta:
+        author = "@jamon"
+        description = "IOCs associated with campaigns targeting Government sector."
+        severity = "HIGH"
+        priority = "HIGH"
+
+    events:
+        $e.metadata.event_type = "NETWORK_CONNECTION"
+        $e.target.hostname = $ioc        
+        $host = strings.coalesce($e.principal.ip,$e.principal.hostname)
+
+        $g.graph.metadata.product_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.entity_type = "DOMAIN_NAME"
+        $g.graph.entity.hostname = $ioc
+        (
+            $g.graph.metadata.threat.associations.type = "THREAT_ACTOR"
+            or $g.graph.metadata.threat.associations.type = "MALWARE"
+        )
+        $g.graph.metadata.threat.associations.industries_affected = "Governments"        
+        $g.graph.metadata.threat.risk_score >= 60
+        $g.graph.metadata.threat.verdict_info.confidence_score >= 60
+
+    match:
+        $host over 1m
+
+    outcome:
+        $risk_score = 0
+
+    condition:
+        $e and $g
+}

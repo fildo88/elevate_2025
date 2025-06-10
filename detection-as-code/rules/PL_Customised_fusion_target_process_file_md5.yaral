@@ -1,0 +1,43 @@
+rule PL_Customised_fusion_target_process_file_md5 {
+
+    meta:
+        author = "thatsiemguy@"
+        description = "Matches Fusion MD5 Hashes against UDM Process and File events."
+        priority = "HIGH"
+        severity = "MEDIUM"
+
+    events:
+        (
+            $e.metadata.event_type = "PROCESS_LAUNCH"
+            or $e.metadata.event_type = "PROCESS_MODULE_LOAD"
+            or $e.metadata.event_type = "FILE_CREATION"
+        )
+        $e.target.process.file.md5 != "" 
+
+        // Filter graph
+        $g.graph.metadata.product_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.vendor_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.entity_type = "FILE"
+        $g.graph.metadata.source_type = "GLOBAL_CONTEXT"
+
+        $ioc = $e.target.process.file.md5
+        $ioc = $g.graph.entity.file.md5 
+
+    match:
+        $ioc over 1h
+
+    outcome:
+        // Extract the Mandiant Automated Intel confidence score of maliciousness
+        $confidence_score = max(if($g.graph.metadata.threat.verdict_info.source_provider = "Mandiant Automated Intel", $g.graph.metadata.threat.verdict_info.confidence_score, 0))
+
+        // Extract the status of the indicator as seen in a breached environment
+        $breached = max(if($g.graph.metadata.threat.verdict_info.pwn = true, 1, 0))
+
+        // Intermediary outcome variable to combine conditions of intelligence extracted in the previous outcome variables.
+        // Return 1 if conditions are met, otherwise return 0.
+        $matched_conditions = if($confidence_score >= 80 AND $breached = 1, 1, 0)
+
+    condition:
+        // Ensure $e, $g and $matched_conditions conditions are met.
+        $e and $g and $matched_conditions = 1
+}

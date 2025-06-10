@@ -1,0 +1,25 @@
+Test:
+  columns:
+  - column_index: 0
+    column_type: STRING
+    key_column: null
+    mapped_column_path: null
+    original_column: CVE
+  - column_index: 1
+    column_type: STRING
+    key_column: null
+    mapped_column_path: null
+    original_column: Description
+  - column_index: 2
+    column_type: STRING
+    key_column: null
+    mapped_column_path: null
+    original_column: URL
+  create_time: '2025-03-22T05:08:06.956706Z'
+  description: Test
+  resource_name: projects/secops-lab-lowe-01/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/dataTables/Test
+  row_time_to_live: null
+  rule_associations_count: null
+  rules: null
+  update_time: '2025-03-22T05:13:08.181861Z'
+  uuid: 3498acfa912d47c5ba355a599ccbcc0a

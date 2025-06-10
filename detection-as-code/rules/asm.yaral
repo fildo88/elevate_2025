@@ -1,0 +1,21 @@
+rule asm {
+    meta:
+        author = "Phillip"
+        description = "8:00 AM local time"
+        severity = "Medium"
+    events:
+        $e.metadata.product_name = "Mandiant Attack Surface Management"
+        $severity = $e.security_result.severity_details 
+    outcome:
+        $risk_score = 
+            max(
+                0
+            + if ($severity = "1",80)
+            + if ($severity = "2",40)
+            + if ($severity = "3",20)
+            + if ($severity = "4",10)
+            + if ($severity = "5",5) 
+            )
+    condition:
+        $e
+}

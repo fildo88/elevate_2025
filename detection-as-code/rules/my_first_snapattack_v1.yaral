@@ -1,0 +1,20 @@
+rule my_first_snapattack_v1 {
+ meta:
+    snapattack_identifier = "68580dfa-fb6a-4182-b1e9-82474d1253df"
+    snapattack_url = "https://snapa.tk/d/GBwVY"
+    snapattack_integration_guid = "1f60353f-7400-4770-97e9-f6fbd6ea2f6b"
+    snapattack_compilation_target = "152"
+    author = "Phil  Lowe"
+    description = "My first snapattack"
+    reference = ""
+    version = "0.01"
+    created = "2024-06-05"
+    category = "process_access"
+    product = "windows"
+
+  events:
+  $Section_1.metadata.product_event_type = ""
+
+  condition:
+    $Section_1
+}

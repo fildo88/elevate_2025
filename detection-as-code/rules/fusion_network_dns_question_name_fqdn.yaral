@@ -1,0 +1,45 @@
+rule fusion_network_dns_question_name_fqdn {
+
+    meta:
+        author = "thatsiemguy@"
+        description = "Matches DNS Questions using a Hostname UDM Network DNS.  Does not match IP addresses"
+        priority = "HIGH"
+        severity = "MEDIUM"
+
+    events:
+        $e.metadata.event_type = "NETWORK_DNS" or
+        // match only FQDN against DNS questions
+        (
+            $e.network.dns.questions.name != ""
+            and $e.network.dns.questions.name != "" 
+            and re.regex($e.network.dns.questions.name, `^((?:(?:[a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*(?:[a-z]+|xn\-\-[a-z0-9]+))\.?$`)
+        )
+        $e.principal.ip != ""
+
+        // Filter graph
+        $g.graph.metadata.product_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.vendor_name = "MANDIANT_FUSION_IOC"
+        $g.graph.metadata.entity_type = "DOMAIN_NAME"
+        $g.graph.metadata.source_type = "GLOBAL_CONTEXT"
+
+        $ioc = $e.network.dns.questions.name
+        $ioc = $g.graph.entity.hostname
+
+    match:
+        $ioc over 1h
+
+    outcome:
+        // Extract the Mandiant Automated Intel confidence score of maliciousness
+        $confidence_score = max(if($g.graph.metadata.threat.verdict_info.source_provider = "Mandiant Automated Intel", $g.graph.metadata.threat.verdict_info.confidence_score, 0))
+
+        // Extract the status of the indicator as seen in a breached environment
+        $breached = max(if($g.graph.metadata.threat.verdict_info.pwn = true, 1, 0))
+
+        // Intermediary outcome variable to combine conditions of intelligence extracted in the previous outcome variables.
+        // Return 1 if conditions are met, otherwise return 0.
+        $matched_conditions = if($confidence_score >= 80 AND $breached = 1, 1, 0)
+
+    condition:
+        // Ensure $e, $g and $matched_conditions conditions are met.
+        $e and $g and $matched_conditions = 1
+}

@@ -1,0 +1,32 @@
+rule DISABLED_add_safeboot_keys_via_reg_utility {
+ meta:
+    snapattack_identifier = "8747e1cb-6261-456a-a60e-0cfbe2ca0420"
+    snapattack_url = "https://snapa.tk/d/WQbOj"
+    snapattack_integration_guid = "1f60353f-7400-4770-97e9-f6fbd6ea2f6b"
+    snapattack_compilation_target = "53"
+    author = "Nasreddine Bencherchali (Nextron Systems)"
+    description = "Detects execution of \"reg.exe\" commands with the \"add\" or \"copy\" flags on safe boot registry keys. Often used by attacker to allow the ransomware to work in safe mode as some security products do not"
+    reference = ""
+    version = "0.01"
+    created = "2022/09/02"
+    category = "process_creation"
+    product = "windows"
+    mitre = "defense_evasion, t1562.001"
+
+  events:
+  (
+    $selection_img.metadata.event_type = "PROCESS_LAUNCH"
+    and (
+      re.regex($selection_img.target.process.file.full_path, `\\reg\.exe$`) nocase
+      or $selection_img.principal.process.file.full_path = "reg.exe"
+    )
+    and re.regex($selection_img.target.process.command_line, `\\SYSTEM\\CurrentControlSet\\Control\\SafeBoot`) nocase
+    and (
+      re.regex($selection_img.target.process.command_line, ` copy `) nocase
+      or re.regex($selection_img.target.process.command_line, ` add `) nocase
+    )
+  )
+
+  condition:
+    $selection_img
+}
