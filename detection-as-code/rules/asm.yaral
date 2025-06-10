@@ -1,4 +1,4 @@
-rule asm {
+rule asm v10{
     meta:
         author = "Phillip"
         description = "8:00 AM local time"
