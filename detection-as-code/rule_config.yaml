@@ -270,8 +270,8 @@ aws_account_leaving_or_removed_from_organization:
   enabled: false
   id: ru_bed81960-c1ff-4ced-896e-8922680480f8
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_bed81960-c1ff-4ced-896e-8922680480f8
-  revision_create_time: '2025-11-07T05:08:10.022767Z'
-  revision_id: v_1762492090_022767000
+  revision_create_time: '2025-11-10T12:16:25.983487Z'
+  revision_id: v_1762776985_983487000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_alb_insecure_ssl_policy:
@@ -330,8 +330,8 @@ aws_cloudtrail_logging_tampered:
   enabled: false
   id: ru_bb74530e-a96d-41f0-b593-7221805914ee
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_bb74530e-a96d-41f0-b593-7221805914ee
-  revision_create_time: '2025-11-07T05:08:05.514367Z'
-  revision_id: v_1762492085_514367000
+  revision_create_time: '2025-11-10T12:16:23.592703Z'
+  revision_id: v_1762776983_592703000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_config_service_modified:
@@ -342,8 +342,8 @@ aws_config_service_modified:
   enabled: false
   id: ru_dd365515-33e0-41c5-a134-fb9806748ca4
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_dd365515-33e0-41c5-a134-fb9806748ca4
-  revision_create_time: '2025-11-07T05:08:35.561951Z'
-  revision_id: v_1762492115_561951000
+  revision_create_time: '2025-11-10T12:16:40.697535Z'
+  revision_id: v_1762777000_697535000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_console_login_without_mfa:
@@ -354,8 +354,8 @@ aws_console_login_without_mfa:
   enabled: false
   id: ru_a1f6b156-fcc7-4351-9bd1-71cc64b69abc
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_a1f6b156-fcc7-4351-9bd1-71cc64b69abc
-  revision_create_time: '2025-11-07T05:08:39.175855Z'
-  revision_id: v_1762492119_175855000
+  revision_create_time: '2025-11-10T12:16:42.368431Z'
+  revision_id: v_1762777002_368431000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_delete_cloudwatch_log_group:
@@ -366,8 +366,8 @@ aws_delete_cloudwatch_log_group:
   enabled: false
   id: ru_4a3c935e-3aac-46a6-8df3-b83c8e6f91b3
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_4a3c935e-3aac-46a6-8df3-b83c8e6f91b3
-  revision_create_time: '2025-11-07T05:08:03.702879Z'
-  revision_id: v_1762492083_702879000
+  revision_create_time: '2025-11-10T12:16:20.686575Z'
+  revision_id: v_1762776980_686575000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_delete_vpc_flow_logs:
@@ -378,8 +378,8 @@ aws_delete_vpc_flow_logs:
   enabled: false
   id: ru_37ce9df2-3919-4f3c-8dd5-a85d508be0ee
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_37ce9df2-3919-4f3c-8dd5-a85d508be0ee
-  revision_create_time: '2025-11-07T05:07:25.511935Z'
-  revision_id: v_1762492045_511935000
+  revision_create_time: '2025-11-10T12:15:56.672031Z'
+  revision_id: v_1762776956_672031000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_ec2_ami_or_snapshot_shared_publicly:
@@ -390,8 +390,8 @@ aws_ec2_ami_or_snapshot_shared_publicly:
   enabled: false
   id: ru_3b5f2e6d-6171-40d0-bfe2-e4a4864fda39
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_3b5f2e6d-6171-40d0-bfe2-e4a4864fda39
-  revision_create_time: '2025-11-07T05:08:22.313167Z'
-  revision_id: v_1762492102_313167000
+  revision_create_time: '2025-11-10T12:16:33.652943Z'
+  revision_id: v_1762776993_652943000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_ec2_get_windows_admin_password:
@@ -402,8 +402,8 @@ aws_ec2_get_windows_admin_password:
   enabled: false
   id: ru_22e1df92-dfa9-4344-8366-a9b0dffaedb2
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_22e1df92-dfa9-4344-8366-a9b0dffaedb2
-  revision_create_time: '2025-11-07T05:08:29.232719Z'
-  revision_id: v_1762492109_232719000
+  revision_create_time: '2025-11-10T12:16:37.578415Z'
+  revision_id: v_1762776997_578415000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_ec2_high_number_of_api_calls:
@@ -414,8 +414,8 @@ aws_ec2_high_number_of_api_calls:
   enabled: false
   id: ru_fdb29244-122c-4182-8b3f-9c190d276ff6
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_fdb29244-122c-4182-8b3f-9c190d276ff6
-  revision_create_time: '2025-11-07T05:07:40.582111Z'
-  revision_id: v_1762492060_582111000
+  revision_create_time: '2025-11-10T12:16:02.808127Z'
+  revision_id: v_1762776962_808127000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_ec2_user_data_modified:
@@ -426,8 +426,8 @@ aws_ec2_user_data_modified:
   enabled: false
   id: ru_cbb04174-3254-412d-8b8e-93384fcc23ec
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_cbb04174-3254-412d-8b8e-93384fcc23ec
-  revision_create_time: '2025-11-07T05:07:40.937455Z'
-  revision_id: v_1762492060_937455000
+  revision_create_time: '2025-11-10T12:16:03.222367Z'
+  revision_id: v_1762776963_222367000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_enable_disable_region:
@@ -438,8 +438,8 @@ aws_enable_disable_region:
   enabled: false
   id: ru_9ce6cc2b-5ba0-4ea5-b72a-959ddef7f729
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_9ce6cc2b-5ba0-4ea5-b72a-959ddef7f729
-  revision_create_time: '2025-11-07T05:08:20.086751Z'
-  revision_id: v_1762492100_086751000
+  revision_create_time: '2025-11-10T12:16:31.915295Z'
+  revision_id: v_1762776991_915295000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_excessive_successful_discovery_events:
@@ -450,8 +450,8 @@ aws_excessive_successful_discovery_events:
   enabled: false
   id: ru_05d63197-735c-4de2-abc7-63baff2534d4
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_05d63197-735c-4de2-abc7-63baff2534d4
-  revision_create_time: '2025-11-07T05:07:39.156751Z'
-  revision_id: v_1762492059_156751000
+  revision_create_time: '2025-11-10T12:16:02.072527Z'
+  revision_id: v_1762776962_072527000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_guardduty_black_hole_traffic_detected:
@@ -534,8 +534,8 @@ aws_guardduty_disabled:
   enabled: false
   id: ru_64f8ac08-df1c-4210-9397-b2015caae9d8
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_64f8ac08-df1c-4210-9397-b2015caae9d8
-  revision_create_time: '2025-11-07T05:07:29.045439Z'
-  revision_id: v_1762492049_045439000
+  revision_create_time: '2025-11-10T12:15:57.966175Z'
+  revision_id: v_1762776957_966175000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_guardduty_malicious_or_suspicious_file_executed:
@@ -570,8 +570,8 @@ aws_guardduty_publishing_destination_deleted:
   enabled: false
   id: ru_c33d214a-e46b-4c36-9ef0-900ab97e79ff
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_c33d214a-e46b-4c36-9ef0-900ab97e79ff
-  revision_create_time: '2025-11-07T05:08:19.410975Z'
-  revision_id: v_1762492099_410975000
+  revision_create_time: '2025-11-10T12:16:31.239775Z'
+  revision_id: v_1762776991_239775000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_guardduty_tor_network_activity_detected:
@@ -594,8 +594,8 @@ aws_guardduty_trusted_or_threat_ip_lists_tampered:
   enabled: false
   id: ru_99f8c4f9-22b3-4453-8f36-1be5fb83597c
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_99f8c4f9-22b3-4453-8f36-1be5fb83597c
-  revision_create_time: '2025-11-07T05:08:35.211263Z'
-  revision_id: v_1762492115_211263000
+  revision_create_time: '2025-11-10T12:16:40.327103Z'
+  revision_id: v_1762777000_327103000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_high_number_of_unknown_user_authentication_attempts:
@@ -606,8 +606,8 @@ aws_high_number_of_unknown_user_authentication_attempts:
   enabled: false
   id: ru_559379f8-b0ca-45fe-9433-9c209314ba75
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_559379f8-b0ca-45fe-9433-9c209314ba75
-  revision_create_time: '2025-11-07T05:08:25.412735Z'
-  revision_id: v_1762492105_412735000
+  revision_create_time: '2025-11-10T12:16:35.833519Z'
+  revision_id: v_1762776995_833519000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_iam_access_analyzer_deleted:
@@ -630,8 +630,8 @@ aws_iam_access_denied_discovery_events:
   enabled: false
   id: ru_d2cfcd21-978a-40fa-ac52-2a6d04c40e1c
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_d2cfcd21-978a-40fa-ac52-2a6d04c40e1c
-  revision_create_time: '2025-11-07T05:08:33.488127Z'
-  revision_id: v_1762492113_488127000
+  revision_create_time: '2025-11-10T12:16:39.249519Z'
+  revision_id: v_1762776999_249519000
   run_frequency: HOURLY
   type: MULTI_EVENT
 aws_iam_activity_by_s3_browser_utility:
@@ -642,8 +642,8 @@ aws_iam_activity_by_s3_browser_utility:
   enabled: false
   id: ru_a85353c5-871c-4dfa-867d-c55049652c73
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_a85353c5-871c-4dfa-867d-c55049652c73
-  revision_create_time: '2025-11-07T05:08:04.734655Z'
-  revision_id: v_1762492084_734655000
+  revision_create_time: '2025-11-10T12:16:23.239039Z'
+  revision_id: v_1762776983_239039000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_iam_activity_from_ec2_instance:
@@ -654,8 +654,8 @@ aws_iam_activity_from_ec2_instance:
   enabled: false
   id: ru_4ec769c8-d154-451f-a6a9-df1e078556e1
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_4ec769c8-d154-451f-a6a9-df1e078556e1
-  revision_create_time: '2025-11-07T05:07:44.997007Z'
-  revision_id: v_1762492064_997007000
+  revision_create_time: '2025-11-10T12:16:07.163439Z'
+  revision_id: v_1762776967_163439000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_iam_administrator_access_policy_attached:
@@ -666,8 +666,8 @@ aws_iam_administrator_access_policy_attached:
   enabled: false
   id: ru_ef488886-cdeb-428c-8c92-a4f8076794da
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_ef488886-cdeb-428c-8c92-a4f8076794da
-  revision_create_time: '2025-11-07T05:07:43.911823Z'
-  revision_id: v_1762492063_911823000
+  revision_create_time: '2025-11-10T12:16:06.050959Z'
+  revision_id: v_1762776966_050959000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_iam_compromised_key_quarantine_policy_attached:
@@ -678,8 +678,8 @@ aws_iam_compromised_key_quarantine_policy_attached:
   enabled: false
   id: ru_ae873eda-3d5b-4357-b635-7b9f3d1caeb5
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_ae873eda-3d5b-4357-b635-7b9f3d1caeb5
-  revision_create_time: '2025-11-07T05:07:32.229791Z'
-  revision_id: v_1762492052_229791000
+  revision_create_time: '2025-11-10T12:15:59.514719Z'
+  revision_id: v_1762776959_514719000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_kms_key_disabled_or_scheduled_for_deletion:
@@ -690,8 +690,8 @@ aws_kms_key_disabled_or_scheduled_for_deletion:
   enabled: false
   id: ru_c46aeb20-341a-4213-ba6e-79e930e76505
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_c46aeb20-341a-4213-ba6e-79e930e76505
-  revision_create_time: '2025-11-07T05:08:33.850351Z'
-  revision_id: v_1762492113_850351000
+  revision_create_time: '2025-11-10T12:16:39.616927Z'
+  revision_id: v_1762776999_616927000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_lambda_update_function_code:
@@ -702,8 +702,8 @@ aws_lambda_update_function_code:
   enabled: false
   id: ru_5185615c-7d19-4453-ae75-0c7bcd157796
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_5185615c-7d19-4453-ae75-0c7bcd157796
-  revision_create_time: '2025-11-07T05:08:04.043823Z'
-  revision_id: v_1762492084_043823000
+  revision_create_time: '2025-11-10T12:16:21.774591Z'
+  revision_id: v_1762776981_774591000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_lateral_movement_using_iam_session_token:
@@ -714,8 +714,8 @@ aws_lateral_movement_using_iam_session_token:
   enabled: false
   id: ru_1b54f850-6571-4917-82a9-0e9f023c84ba
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_1b54f850-6571-4917-82a9-0e9f023c84ba
-  revision_create_time: '2025-11-07T05:08:18.756207Z'
-  revision_id: v_1762492098_756207000
+  revision_create_time: '2025-11-10T12:16:30.523727Z'
+  revision_id: v_1762776990_523727000
   run_frequency: HOURLY
   type: MULTI_EVENT
 aws_multi_factor_authentication_disabled:
@@ -726,8 +726,8 @@ aws_multi_factor_authentication_disabled:
   enabled: false
   id: ru_e060258d-6c95-4726-afb7-2b31e5fbc7fd
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_e060258d-6c95-4726-afb7-2b31e5fbc7fd
-  revision_create_time: '2025-11-07T05:08:26.724063Z'
-  revision_id: v_1762492106_724063000
+  revision_create_time: '2025-11-10T12:16:36.585071Z'
+  revision_id: v_1762776996_585071000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_new_mfa_method_registered_for_user:
@@ -738,8 +738,8 @@ aws_new_mfa_method_registered_for_user:
   enabled: false
   id: ru_0871ede9-908a-4372-8498-bf808f47e080
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_0871ede9-908a-4372-8498-bf808f47e080
-  revision_create_time: '2025-11-07T05:07:28.431695Z'
-  revision_id: v_1762492048_431695000
+  revision_create_time: '2025-11-10T12:15:57.569327Z'
+  revision_id: v_1762776957_569327000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_password_policy_change:
@@ -750,8 +750,8 @@ aws_password_policy_change:
   enabled: false
   id: ru_67ab497f-c584-460b-a42b-63583f47b852
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_67ab497f-c584-460b-a42b-63583f47b852
-  revision_create_time: '2025-11-07T05:07:29.927615Z'
-  revision_id: v_1762492049_927615000
+  revision_create_time: '2025-11-10T12:15:58.373535Z'
+  revision_id: v_1762776958_373535000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_privilege_escalation_using_iam_access_key:
@@ -762,8 +762,8 @@ aws_privilege_escalation_using_iam_access_key:
   enabled: false
   id: ru_ee147aac-a5a3-456f-9ce4-c560280748f8
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_ee147aac-a5a3-456f-9ce4-c560280748f8
-  revision_create_time: '2025-11-07T05:08:00.230015Z'
-  revision_id: v_1762492080_230015000
+  revision_create_time: '2025-11-10T12:16:16.342959Z'
+  revision_id: v_1762776976_342959000
   run_frequency: HOURLY
   type: MULTI_EVENT
 aws_privilege_escalation_using_iam_login_profile:
@@ -774,8 +774,8 @@ aws_privilege_escalation_using_iam_login_profile:
   enabled: false
   id: ru_20f46df6-ae8f-4eed-bd04-90ef1af25ae4
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_20f46df6-ae8f-4eed-bd04-90ef1af25ae4
-  revision_create_time: '2025-11-07T05:07:48.375679Z'
-  revision_id: v_1762492068_375679000
+  revision_create_time: '2025-11-10T12:16:08.996431Z'
+  revision_id: v_1762776968_996431000
   run_frequency: HOURLY
   type: MULTI_EVENT
 aws_rds_snapshot_shared_publicly:
@@ -786,8 +786,8 @@ aws_rds_snapshot_shared_publicly:
   enabled: false
   id: ru_6a1aea6a-6a06-4e1d-b370-4ac503ce13c4
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_6a1aea6a-6a06-4e1d-b370-4ac503ce13c4
-  revision_create_time: '2025-11-07T05:08:02.003295Z'
-  revision_id: v_1762492082_003295000
+  revision_create_time: '2025-11-10T12:16:18.883071Z'
+  revision_id: v_1762776978_883071000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_s3_made_public_by_acl:
@@ -798,8 +798,8 @@ aws_s3_made_public_by_acl:
   enabled: false
   id: ru_8716016e-afcc-4104-98e0-10382e17fb7e
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_8716016e-afcc-4104-98e0-10382e17fb7e
-  revision_create_time: '2025-11-07T05:08:19.086975Z'
-  revision_id: v_1762492099_086975000
+  revision_create_time: '2025-11-10T12:16:30.906495Z'
+  revision_id: v_1762776990_906495000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_s3_public_access_block_removed:
@@ -810,8 +810,8 @@ aws_s3_public_access_block_removed:
   enabled: false
   id: ru_fbe33a47-afee-4187-b724-d914093ac061
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_fbe33a47-afee-4187-b724-d914093ac061
-  revision_create_time: '2025-11-07T05:08:21.994639Z'
-  revision_id: v_1762492101_994639000
+  revision_create_time: '2025-11-10T12:16:33.280335Z'
+  revision_id: v_1762776993_280335000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_saml_identity_provider_changes:
@@ -822,8 +822,8 @@ aws_saml_identity_provider_changes:
   enabled: false
   id: ru_da28d70e-ccf0-485f-89fb-7eb6113efdfa
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_da28d70e-ccf0-485f-89fb-7eb6113efdfa
-  revision_create_time: '2025-11-07T05:08:04.409039Z'
-  revision_id: v_1762492084_409039000
+  revision_create_time: '2025-11-10T12:16:22.117711Z'
+  revision_id: v_1762776982_117711000
   run_frequency: LIVE
   type: SINGLE_EVENT
 aws_security_group_open_to_world:
@@ -834,8 +834,8 @@ aws_security_group_open_to_world:
   enabled: false
   id: ru_2e5fd035-93b8-483c-9651-bfb2ac8360ec
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_2e5fd035-93b8-483c-9651-bfb2ac8360ec
-  revision_create_time: '2025-11-07T05:08:19.771135Z'
-  revision_id: v_1762492099_771135000
+  revision_create_time: '2025-11-10T12:16:31.559487Z'
+  revision_id: v_1762776991_559487000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_ses_service_modification:
@@ -846,8 +846,8 @@ aws_ses_service_modification:
   enabled: false
   id: ru_e90afea8-d845-4755-ab0a-2c2ad664d8d0
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_e90afea8-d845-4755-ab0a-2c2ad664d8d0
-  revision_create_time: '2025-11-07T05:08:13.363007Z'
-  revision_id: v_1762492093_363007000
+  revision_create_time: '2025-11-10T12:16:27.325599Z'
+  revision_id: v_1762776987_325599000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_successful_api_from_tor_exit_node:
@@ -858,8 +858,8 @@ aws_successful_api_from_tor_exit_node:
   enabled: false
   id: ru_a1044784-c6df-42c1-8665-6a0239d2c3d4
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_a1044784-c6df-42c1-8665-6a0239d2c3d4
-  revision_create_time: '2025-11-07T05:07:38.815711Z'
-  revision_id: v_1762492058_815711000
+  revision_create_time: '2025-11-10T12:16:01.721679Z'
+  revision_id: v_1762776961_721679000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_successful_console_authentication_from_multiple_ips:
@@ -870,8 +870,8 @@ aws_successful_console_authentication_from_multiple_ips:
   enabled: false
   id: ru_0b485a89-fbe0-44ae-a6ff-de2b82e508e7
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_0b485a89-fbe0-44ae-a6ff-de2b82e508e7
-  revision_create_time: '2025-11-07T05:07:36.639135Z'
-  revision_id: v_1762492056_639135000
+  revision_create_time: '2025-11-10T12:16:01.006575Z'
+  revision_id: v_1762776961_006575000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_successful_login_after_multiple_failed_attempts:
@@ -882,8 +882,8 @@ aws_successful_login_after_multiple_failed_attempts:
   enabled: false
   id: ru_699bb461-9faa-4aaf-87e6-93c362d2ba11
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_699bb461-9faa-4aaf-87e6-93c362d2ba11
-  revision_create_time: '2025-11-07T05:07:35.184751Z'
-  revision_id: v_1762492055_184751000
+  revision_create_time: '2025-11-10T12:16:00.266447Z'
+  revision_id: v_1762776960_266447000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_unusual_number_of_failed_authentications_from_the_same_ip:
@@ -894,8 +894,8 @@ aws_unusual_number_of_failed_authentications_from_the_same_ip:
   enabled: false
   id: ru_d05c0c69-f963-42b3-91d0-51088e251bd4
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_d05c0c69-f963-42b3-91d0-51088e251bd4
-  revision_create_time: '2025-11-07T05:08:36.856063Z'
-  revision_id: v_1762492116_856063000
+  revision_create_time: '2025-11-10T12:16:41.367263Z'
+  revision_id: v_1762777001_367263000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_user_creates_permanent_access_key:
@@ -1062,8 +1062,8 @@ demoverse_user_download_executable_from_macro:
   enabled: true
   id: ru_c5b25ee7-0e5d-4e62-8c78-92e387c113a3
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_c5b25ee7-0e5d-4e62-8c78-92e387c113a3
-  revision_create_time: '2025-11-07T05:08:22.657247Z'
-  revision_id: v_1762492102_657247000
+  revision_create_time: '2025-11-10T12:16:34.002431Z'
+  revision_id: v_1762776994_002431000
   run_frequency: LIVE
   type: MULTI_EVENT
 demoverse_workspace_MalwareDownload:
@@ -1086,8 +1086,8 @@ dns_query_to_recently_created_domain:
   enabled: false
   id: ru_71e8b0ee-5deb-4dad-992d-4eb7a760c025
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_71e8b0ee-5deb-4dad-992d-4eb7a760c025
-  revision_create_time: '2025-11-07T05:08:20.452671Z'
-  revision_id: v_1762492100_452671000
+  revision_create_time: '2025-11-10T12:16:32.243263Z'
+  revision_id: v_1762776992_243263000
   run_frequency: HOURLY
   type: MULTI_EVENT
 domain_prevalence:
@@ -1098,8 +1098,8 @@ domain_prevalence:
   enabled: false
   id: ru_621a2565-31bf-4de7-96ad-565ca46a9b01
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_621a2565-31bf-4de7-96ad-565ca46a9b01
-  revision_create_time: '2025-11-07T05:07:30.697855Z'
-  revision_id: v_1762492050_697855000
+  revision_create_time: '2025-11-10T12:15:58.791343Z'
+  revision_id: v_1762776958_791343000
   run_frequency: LIVE
   type: MULTI_EVENT
 fusion_network_dns_question_name_fqdn:
@@ -1170,8 +1170,8 @@ gcti_benign_binaries_contacts_tor_exit_node:
   enabled: false
   id: ru_cbd127ec-557c-46b3-85f8-aa7232b85860
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_cbd127ec-557c-46b3-85f8-aa7232b85860
-  revision_create_time: '2025-11-07T05:08:13.713375Z'
-  revision_id: v_1762492093_713375000
+  revision_create_time: '2025-11-10T12:16:27.647807Z'
+  revision_id: v_1762776987_647807000
   run_frequency: LIVE
   type: MULTI_EVENT
 gcti_remote_access_tools:
@@ -1182,8 +1182,8 @@ gcti_remote_access_tools:
   enabled: false
   id: ru_808a70fd-489b-480b-a572-a209036fd183
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_808a70fd-489b-480b-a572-a209036fd183
-  revision_create_time: '2025-11-07T05:07:49.327967Z'
-  revision_id: v_1762492069_327967000
+  revision_create_time: '2025-11-10T12:16:10.092431Z'
+  revision_id: v_1762776970_092431000
   run_frequency: LIVE
   type: MULTI_EVENT
 gcti_tor_exit_nodes:
@@ -1194,8 +1194,8 @@ gcti_tor_exit_nodes:
   enabled: false
   id: ru_07762388-d5c4-412d-92e0-b14efd265245
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_07762388-d5c4-412d-92e0-b14efd265245
-  revision_create_time: '2025-11-07T05:08:37.211071Z'
-  revision_id: v_1762492117_211071000
+  revision_create_time: '2025-11-10T12:16:41.703551Z'
+  revision_id: v_1762777001_703551000
   run_frequency: HOURLY
   type: MULTI_EVENT
 geoip_user_login_from_multiple_states_or_countries:
@@ -1206,8 +1206,8 @@ geoip_user_login_from_multiple_states_or_countries:
   enabled: false
   id: ru_3b9b3ecf-fab9-4830-b893-d10a53386413
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_3b9b3ecf-fab9-4830-b893-d10a53386413
-  revision_create_time: '2025-11-07T05:08:16.766863Z'
-  revision_id: v_1762492096_766863000
+  revision_create_time: '2025-11-10T12:16:29.859167Z'
+  revision_id: v_1762776989_859167000
   run_frequency: HOURLY
   type: MULTI_EVENT
 github_access_granted_to_personal_access_token_followed_by_high_number_of_cloned_non_public_repositories:
@@ -1530,8 +1530,8 @@ google_safebrowsing_file_contacts_tor_exit_node:
   enabled: false
   id: ru_1de92d67-b95c-4fb1-89d5-960e462be2e8
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_1de92d67-b95c-4fb1-89d5-960e462be2e8
-  revision_create_time: '2025-11-07T05:07:47.869951Z'
-  revision_id: v_1762492067_869951000
+  revision_create_time: '2025-11-10T12:16:08.647567Z'
+  revision_id: v_1762776968_647567000
   run_frequency: HOURLY
   type: MULTI_EVENT
 google_safebrowsing_file_process_creation:
@@ -1542,8 +1542,8 @@ google_safebrowsing_file_process_creation:
   enabled: false
   id: ru_fb8747ec-9db2-4979-bbdf-261215c71f49
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_fb8747ec-9db2-4979-bbdf-261215c71f49
-  revision_create_time: '2025-11-07T05:08:06.987199Z'
-  revision_id: v_1762492086_987199000
+  revision_create_time: '2025-11-10T12:16:25.002111Z'
+  revision_id: v_1762776985_002111000
   run_frequency: HOURLY
   type: MULTI_EVENT
 google_safebrowsing_with_prevalence:
@@ -1554,8 +1554,8 @@ google_safebrowsing_with_prevalence:
   enabled: false
   id: ru_e8ebaafb-463c-4994-9be7-3c933e30013c
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_e8ebaafb-463c-4994-9be7-3c933e30013c
-  revision_create_time: '2025-11-07T05:08:15.720927Z'
-  revision_id: v_1762492095_720927000
+  revision_create_time: '2025-11-10T12:16:29.461343Z'
+  revision_id: v_1762776989_461343000
   run_frequency: LIVE
   type: MULTI_EVENT
 google_workspace_admin_role_assignment:
@@ -1830,8 +1830,8 @@ hash_prevalence:
   enabled: false
   id: ru_108f4e6e-ba88-48b2-bde6-63ffc44511b0
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_108f4e6e-ba88-48b2-bde6-63ffc44511b0
-  revision_create_time: '2025-11-07T05:07:57.312047Z'
-  revision_id: v_1762492077_312047000
+  revision_create_time: '2025-11-10T12:16:13.438927Z'
+  revision_id: v_1762776973_438927000
   run_frequency: LIVE
   type: MULTI_EVENT
 high_risk_user_download_executable_from_macro:
@@ -1842,8 +1842,8 @@ high_risk_user_download_executable_from_macro:
   enabled: false
   id: ru_24d3d3be-07cd-4711-9628-05fcb8938260
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_24d3d3be-07cd-4711-9628-05fcb8938260
-  revision_create_time: '2025-11-07T05:07:43.535487Z'
-  revision_id: v_1762492063_535487000
+  revision_create_time: '2025-11-10T12:16:05.732847Z'
+  revision_id: v_1762776965_732847000
   run_frequency: LIVE
   type: MULTI_EVENT
 impacket_wmiexec_cisa_report:
@@ -1854,8 +1854,8 @@ impacket_wmiexec_cisa_report:
   enabled: false
   id: ru_1057fc2b-5010-4222-905f-755b2ab711f1
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_1057fc2b-5010-4222-905f-755b2ab711f1
-  revision_create_time: '2025-11-07T05:08:08.035295Z'
-  revision_id: v_1762492088_035295000
+  revision_create_time: '2025-11-10T12:16:25.336335Z'
+  revision_id: v_1762776985_336335000
   run_frequency: LIVE
   type: SINGLE_EVENT
 info_bat:
@@ -2166,8 +2166,8 @@ ioc_domain_C2:
   enabled: false
   id: ru_e7f84fd6-d1b8-40be-968c-c08717cf1b68
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_e7f84fd6-d1b8-40be-968c-c08717cf1b68
-  revision_create_time: '2025-11-07T05:08:28.229023Z'
-  revision_id: v_1762492108_229023000
+  revision_create_time: '2025-11-10T12:16:37.249791Z'
+  revision_id: v_1762776997_249791000
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_domain_internal_policy:
@@ -2178,8 +2178,8 @@ ioc_domain_internal_policy:
   enabled: false
   id: ru_d71a72bb-1cd4-4b38-bb84-3627088b9472
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_d71a72bb-1cd4-4b38-bb84-3627088b9472
-  revision_create_time: '2025-11-07T05:08:17.772607Z'
-  revision_id: v_1762492097_772607000
+  revision_create_time: '2025-11-10T12:16:30.189951Z'
+  revision_id: v_1762776990_189951000
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_hash_prevalence:
@@ -2190,8 +2190,8 @@ ioc_hash_prevalence:
   enabled: false
   id: ru_e472da79-00af-4f63-b009-ba53e2f71934
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_e472da79-00af-4f63-b009-ba53e2f71934
-  revision_create_time: '2025-11-07T05:08:23.034879Z'
-  revision_id: v_1762492103_034879000
+  revision_create_time: '2025-11-10T12:16:34.625519Z'
+  revision_id: v_1762776994_625519000
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_ip_target:
@@ -2202,8 +2202,8 @@ ioc_ip_target:
   enabled: false
   id: ru_ffb783cc-9c91-4380-bce6-3d54782ea1a2
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_ffb783cc-9c91-4380-bce6-3d54782ea1a2
-  revision_create_time: '2025-11-07T05:08:11.372911Z'
-  revision_id: v_1762492091_372911000
+  revision_create_time: '2025-11-10T12:16:26.669199Z'
+  revision_id: v_1762776986_669199000
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_sha256_hash:
@@ -2214,8 +2214,8 @@ ioc_sha256_hash:
   enabled: false
   id: ru_29ce895d-3a8d-4dd5-a943-35b8cb734b14
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_29ce895d-3a8d-4dd5-a943-35b8cb734b14
-  revision_create_time: '2025-11-07T05:07:37.355007Z'
-  revision_id: v_1762492057_355007000
+  revision_create_time: '2025-11-10T12:16:01.370735Z'
+  revision_id: v_1762776961_370735000
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_sha256_hash_vt:
@@ -2226,8 +2226,8 @@ ioc_sha256_hash_vt:
   enabled: false
   id: ru_cdd2a87d-63c1-4ee7-bde8-4f92f1b8f72a
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_cdd2a87d-63c1-4ee7-bde8-4f92f1b8f72a
-  revision_create_time: '2025-11-07T05:07:55.470431Z'
-  revision_id: v_1762492075_470431000
+  revision_create_time: '2025-11-10T12:16:13.040015Z'
+  revision_id: v_1762776973_040015000
   run_frequency: LIVE
   type: MULTI_EVENT
 ip_target_prevalence:
@@ -2238,8 +2238,8 @@ ip_target_prevalence:
   enabled: false
   id: ru_5ebcabc3-4027-4981-88eb-ad468ed49d11
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_5ebcabc3-4027-4981-88eb-ad468ed49d11
-  revision_create_time: '2025-11-07T05:07:41.389503Z'
-  revision_id: v_1762492061_389503000
+  revision_create_time: '2025-11-10T12:16:03.587311Z'
+  revision_id: v_1762776963_587311000
   run_frequency: LIVE
   type: MULTI_EVENT
 logins_from_terminated_employees:
@@ -2250,8 +2250,8 @@ logins_from_terminated_employees:
   enabled: false
   id: ru_fb460178-4479-40cb-a97a-917718e617cb
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_fb460178-4479-40cb-a97a-917718e617cb
-  revision_create_time: '2025-11-07T05:08:00.633391Z'
-  revision_id: v_1762492080_633391000
+  revision_create_time: '2025-11-10T12:16:17.435887Z'
+  revision_id: v_1762776977_435887000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 low_prevalence_hash_on_process_launch_low_prevalence_domain_accessed:
@@ -2262,8 +2262,8 @@ low_prevalence_hash_on_process_launch_low_prevalence_domain_accessed:
   enabled: false
   id: ru_0f95b01a-db8d-44b0-b627-5cda85d163a7
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_0f95b01a-db8d-44b0-b627-5cda85d163a7
-  revision_create_time: '2025-11-07T05:08:06.185487Z'
-  revision_id: v_1762492086_185487000
+  revision_create_time: '2025-11-10T12:16:24.673055Z'
+  revision_id: v_1762776984_673055000
   run_frequency: LIVE
   type: MULTI_EVENT
 malware_apt_grizzly_steppe_user_agent:
@@ -2550,8 +2550,8 @@ mitre_attack_T1021_002_windows_admin_share_basic:
   enabled: false
   id: ru_a127547e-fa7e-4086-9fd1-3d63b113f7cf
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_a127547e-fa7e-4086-9fd1-3d63b113f7cf
-  revision_create_time: '2025-11-07T05:08:29.560111Z'
-  revision_id: v_1762492109_560111000
+  revision_create_time: '2025-11-10T12:16:37.896591Z'
+  revision_id: v_1762776997_896591000
   run_frequency: LIVE
   type: SINGLE_EVENT
 mitre_attack_T1021_002_windows_admin_share_with_asset_entity:
@@ -2562,8 +2562,8 @@ mitre_attack_T1021_002_windows_admin_share_with_asset_entity:
   enabled: false
   id: ru_58b92f86-552a-44d9-98b4-cf514ef14721
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_58b92f86-552a-44d9-98b4-cf514ef14721
-  revision_create_time: '2025-11-07T05:07:42.069087Z'
-  revision_id: v_1762492062_069087000
+  revision_create_time: '2025-11-10T12:16:04.281599Z'
+  revision_id: v_1762776964_281599000
   run_frequency: LIVE
   type: MULTI_EVENT
 mitre_attack_T1021_002_windows_admin_share_with_user_enrichment:
@@ -2574,8 +2574,8 @@ mitre_attack_T1021_002_windows_admin_share_with_user_enrichment:
   enabled: false
   id: ru_d48185e6-91f2-480f-9c4f-9a3e252f90f2
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_d48185e6-91f2-480f-9c4f-9a3e252f90f2
-  revision_create_time: '2025-11-07T05:07:32.874079Z'
-  revision_id: v_1762492052_874079000
+  revision_create_time: '2025-11-10T12:15:59.870127Z'
+  revision_id: v_1762776959_870127000
   run_frequency: LIVE
   type: SINGLE_EVENT
 mitre_attack_T1021_002_windows_admin_share_with_user_entity:
@@ -2586,8 +2586,8 @@ mitre_attack_T1021_002_windows_admin_share_with_user_entity:
   enabled: false
   id: ru_4e11e8c0-38cd-4cf9-a019-42c6a9c98480
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_4e11e8c0-38cd-4cf9-a019-42c6a9c98480
-  revision_create_time: '2025-11-07T05:07:39.526351Z'
-  revision_id: v_1762492059_526351000
+  revision_create_time: '2025-11-10T12:16:02.418687Z'
+  revision_id: v_1762776962_418687000
   run_frequency: LIVE
   type: MULTI_EVENT
 mitre_attack_T1037_001_windows_logon_script:
@@ -2610,8 +2610,8 @@ mitre_attack_T1053_005_windows_creation_of_scheduled_task:
   enabled: false
   id: ru_4d38b930-9c8c-4e67-a0be-6c6b50355bfd
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_4d38b930-9c8c-4e67-a0be-6c6b50355bfd
-  revision_create_time: '2025-11-07T05:07:35.849199Z'
-  revision_id: v_1762492055_849199000
+  revision_create_time: '2025-11-10T12:16:00.667615Z'
+  revision_id: v_1762776960_667615000
   run_frequency: LIVE
   type: SINGLE_EVENT
 mitre_attack_T1140_encoded_powershell_command:
@@ -2622,8 +2622,8 @@ mitre_attack_T1140_encoded_powershell_command:
   enabled: false
   id: ru_3aac6e60-e6f8-42e4-9f27-31692be05a9d
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_3aac6e60-e6f8-42e4-9f27-31692be05a9d
-  revision_create_time: '2025-11-07T05:07:26.048671Z'
-  revision_id: v_1762492046_048671000
+  revision_create_time: '2025-11-10T12:15:57.163599Z'
+  revision_id: v_1762776957_163599000
   run_frequency: LIVE
   type: SINGLE_EVENT
 mitre_attack_T1218_005_windows_mshta_remove_usage:
@@ -2742,8 +2742,8 @@ mitre_attack_T1570_suspicious_command_psexec:
   enabled: false
   id: ru_00f4ad82-1aa0-4892-9934-ea41880165aa
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_00f4ad82-1aa0-4892-9934-ea41880165aa
-  revision_create_time: '2025-11-07T05:07:55.105023Z'
-  revision_id: v_1762492075_105023000
+  revision_create_time: '2025-11-10T12:16:11.947119Z'
+  revision_id: v_1762776971_947119000
   run_frequency: LIVE
   type: SINGLE_EVENT
 my_first_snapattack_v1:
@@ -2802,8 +2802,8 @@ network_connection_first_seen_in_past_day:
   enabled: false
   id: ru_ccff1e8a-3f44-4886-87dc-3663bb41c345
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_ccff1e8a-3f44-4886-87dc-3663bb41c345
-  revision_create_time: '2025-11-07T05:07:58.766767Z'
-  revision_id: v_1762492078_766767000
+  revision_create_time: '2025-11-10T12:16:14.877551Z'
+  revision_id: v_1762776974_877551000
   run_frequency: HOURLY
   type: MULTI_EVENT
 network_connection_tor_exit_nodes:
@@ -2826,8 +2826,8 @@ network_http_low_prevalence_domain_access:
   enabled: false
   id: ru_fac71781-87e5-4414-8c25-e438c1066e1c
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_fac71781-87e5-4414-8c25-e438c1066e1c
-  revision_create_time: '2025-11-07T05:07:52.224655Z'
-  revision_id: v_1762492072_224655000
+  revision_create_time: '2025-11-10T12:16:10.470527Z'
+  revision_id: v_1762776970_470527000
   run_frequency: HOURLY
   type: MULTI_EVENT
 network_traffic_to_specific_country:
@@ -2838,8 +2838,8 @@ network_traffic_to_specific_country:
   enabled: false
   id: ru_5057f298-5e20-4a1a-8168-4b450417c1b1
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_5057f298-5e20-4a1a-8168-4b450417c1b1
-  revision_create_time: '2025-11-07T05:08:21.096127Z'
-  revision_id: v_1762492101_096127000
+  revision_create_time: '2025-11-10T12:16:32.924831Z'
+  revision_id: v_1762776992_924831000
   run_frequency: LIVE
   type: SINGLE_EVENT
 non_prod_arg_unc3944_cli_13:
@@ -3246,8 +3246,8 @@ port_proxy_forwarding_T1090_cisa_report:
   enabled: false
   id: ru_9a65a7d8-8f71-469a-89d6-ec6009225d6d
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_9a65a7d8-8f71-469a-89d6-ec6009225d6d
-  revision_create_time: '2025-11-07T05:08:32.509119Z'
-  revision_id: v_1762492112_509119000
+  revision_create_time: '2025-11-10T12:16:38.908015Z'
+  revision_id: v_1762776998_908015000
   run_frequency: LIVE
   type: SINGLE_EVENT
 process_launch_vt_enrichment:
@@ -3258,8 +3258,8 @@ process_launch_vt_enrichment:
   enabled: false
   id: ru_ce0edb5e-2995-480b-a89b-6a651203bad8
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_ce0edb5e-2995-480b-a89b-6a651203bad8
-  revision_create_time: '2025-11-07T05:08:20.767967Z'
-  revision_id: v_1762492100_767967000
+  revision_create_time: '2025-11-10T12:16:32.547487Z'
+  revision_id: v_1762776992_547487000
   run_frequency: LIVE
   type: SINGLE_EVENT
 recon_credential_theft_cisa_report:
@@ -3270,8 +3270,8 @@ recon_credential_theft_cisa_report:
   enabled: false
   id: ru_f5d90ec1-6e29-4027-aef6-00c66ce66d8c
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_f5d90ec1-6e29-4027-aef6-00c66ce66d8c
-  revision_create_time: '2025-11-07T05:07:45.420271Z'
-  revision_id: v_1762492065_420271000
+  revision_create_time: '2025-11-10T12:16:07.523119Z'
+  revision_id: v_1762776967_523119000
   run_frequency: LIVE
   type: MULTI_EVENT
 recon_environment_enumeration_active_directory_cisa_report:
@@ -3282,8 +3282,8 @@ recon_environment_enumeration_active_directory_cisa_report:
   enabled: false
   id: ru_75991d62-02cb-4855-adb5-289077d7bf77
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_75991d62-02cb-4855-adb5-289077d7bf77
-  revision_create_time: '2025-11-07T05:08:12.374767Z'
-  revision_id: v_1762492092_374767000
+  revision_create_time: '2025-11-10T12:16:26.998447Z'
+  revision_id: v_1762776986_998447000
   run_frequency: LIVE
   type: MULTI_EVENT
 recon_environment_enumeration_network_cisa_report:
@@ -3294,8 +3294,8 @@ recon_environment_enumeration_network_cisa_report:
   enabled: false
   id: ru_65a45e44-d1bf-4c5c-b201-96cd0016756f
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_65a45e44-d1bf-4c5c-b201-96cd0016756f
-  revision_create_time: '2025-11-07T05:08:38.184367Z'
-  revision_id: v_1762492118_184367000
+  revision_create_time: '2025-11-10T12:16:42.039775Z'
+  revision_id: v_1762777002_039775000
   run_frequency: LIVE
   type: MULTI_EVENT
 recon_environment_enumeration_system_cisa_report:
@@ -3306,8 +3306,8 @@ recon_environment_enumeration_system_cisa_report:
   enabled: false
   id: ru_7d9287af-13a9-4a89-bcd5-d264e769958a
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_7d9287af-13a9-4a89-bcd5-d264e769958a
-  revision_create_time: '2025-11-07T05:08:24.080831Z'
-  revision_id: v_1762492104_080831000
+  revision_create_time: '2025-11-10T12:16:35.142367Z'
+  revision_id: v_1762776995_142367000
   run_frequency: LIVE
   type: MULTI_EVENT
 recon_successful_logon_enumeration_powershell_T1033_cisa_report:
@@ -3318,8 +3318,8 @@ recon_successful_logon_enumeration_powershell_T1033_cisa_report:
   enabled: false
   id: ru_ce62cfdc-650a-403e-bc95-22bb5561524c
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_ce62cfdc-650a-403e-bc95-22bb5561524c
-  revision_create_time: '2025-11-07T05:07:54.021471Z'
-  revision_id: v_1762492074_021471000
+  revision_create_time: '2025-11-10T12:16:11.550479Z'
+  revision_id: v_1762776971_550479000
   run_frequency: LIVE
   type: SINGLE_EVENT
 recon_suspicious_commands_cisa_report:
@@ -3330,8 +3330,8 @@ recon_suspicious_commands_cisa_report:
   enabled: false
   id: ru_49740752-1569-4140-9f39-2278c1625659
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_49740752-1569-4140-9f39-2278c1625659
-  revision_create_time: '2025-11-07T05:08:14.686575Z'
-  revision_id: v_1762492094_686575000
+  revision_create_time: '2025-11-10T12:16:29.110847Z'
+  revision_id: v_1762776989_110847000
   run_frequency: LIVE
   type: MULTI_EVENT
 rule_1727979376900:
@@ -3354,8 +3354,8 @@ rw_mimikatz_T1003:
   enabled: false
   id: ru_dea166c1-40c9-484f-a40e-c82a918bf2e4
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_dea166c1-40c9-484f-a40e-c82a918bf2e4
-  revision_create_time: '2025-11-07T05:08:02.345503Z'
-  revision_id: v_1762492082_345503000
+  revision_create_time: '2025-11-10T12:16:19.212479Z'
+  revision_id: v_1762776979_212479000
   run_frequency: LIVE
   type: SINGLE_EVENT
 rw_windows_password_spray_T1110_003:
@@ -3366,8 +3366,8 @@ rw_windows_password_spray_T1110_003:
   enabled: false
   id: ru_25489efa-30d2-4d16-86a2-e49c63b66f76
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_25489efa-30d2-4d16-86a2-e49c63b66f76
-  revision_create_time: '2025-11-07T05:08:10.394687Z'
-  revision_id: v_1762492090_394687000
+  revision_create_time: '2025-11-10T12:16:26.331263Z'
+  revision_id: v_1762776986_331263000
   run_frequency: LIVE
   type: MULTI_EVENT
 safeboot_reg_copy_add:
@@ -3390,8 +3390,8 @@ safebrowsing_process_creation_hashes_seen_more_than_7_days:
   enabled: false
   id: ru_223bf052-b59b-498e-84f7-9bd95c3fc92f
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_223bf052-b59b-498e-84f7-9bd95c3fc92f
-  revision_create_time: '2025-11-07T05:08:25.779471Z'
-  revision_id: v_1762492105_779471000
+  revision_create_time: '2025-11-10T12:16:36.193087Z'
+  revision_id: v_1762776996_193087000
   run_frequency: HOURLY
   type: MULTI_EVENT
 ssh_bruteforce:
@@ -3426,8 +3426,8 @@ suspicious_asn:
   enabled: false
   id: ru_fa908410-e044-45d2-b1bd-27c9621feba2
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_fa908410-e044-45d2-b1bd-27c9621feba2
-  revision_create_time: '2025-11-07T05:08:30.488063Z'
-  revision_id: v_1762492110_488063000
+  revision_create_time: '2025-11-10T12:16:38.212063Z'
+  revision_id: v_1762776998_212063000
   run_frequency: LIVE
   type: SINGLE_EVENT
 suspicious_change_in_hosts_file:
@@ -3882,8 +3882,8 @@ whoami_execution:
   enabled: false
   id: ru_5bb0b3ad-def7-401e-83a0-982af3603ef5
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_5bb0b3ad-def7-401e-83a0-982af3603ef5
-  revision_create_time: '2025-11-07T05:08:27.083247Z'
-  revision_id: v_1762492107_083247000
+  revision_create_time: '2025-11-10T12:16:36.905727Z'
+  revision_id: v_1762776996_905727000
   run_frequency: LIVE
   type: SINGLE_EVENT
 whois_dns_query_to_typosquatting_domain:
@@ -3894,8 +3894,8 @@ whois_dns_query_to_typosquatting_domain:
   enabled: false
   id: ru_e3c07229-a54b-4cb2-89cd-0a3f8d1bb7ff
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_e3c07229-a54b-4cb2-89cd-0a3f8d1bb7ff
-  revision_create_time: '2025-11-07T05:08:03.368271Z'
-  revision_id: v_1762492083_368271000
+  revision_create_time: '2025-11-10T12:16:20.337071Z'
+  revision_id: v_1762776980_337071000
   run_frequency: HOURLY
   type: MULTI_EVENT
 whois_expired_domain_accessed:
@@ -3906,8 +3906,8 @@ whois_expired_domain_accessed:
   enabled: false
   id: ru_3a73c8e3-24c8-4fbc-8377-a6af602167cb
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_3a73c8e3-24c8-4fbc-8377-a6af602167cb
-  revision_create_time: '2025-11-07T05:08:00.976511Z'
-  revision_id: v_1762492080_976511000
+  revision_create_time: '2025-11-10T12:16:17.769535Z'
+  revision_id: v_1762776977_769535000
   run_frequency: HOURLY
   type: MULTI_EVENT
 whois_expired_domain_executable_downloaded:
@@ -3954,8 +3954,8 @@ whois_recently_created_domain_access:
   enabled: false
   id: ru_2bc0a07e-a40f-45d4-8d0e-c819944fa6c6
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_2bc0a07e-a40f-45d4-8d0e-c819944fa6c6
-  revision_create_time: '2025-11-07T05:07:59.759023Z'
-  revision_id: v_1762492079_759023000
+  revision_create_time: '2025-11-10T12:16:15.998367Z'
+  revision_id: v_1762776975_998367000
   run_frequency: HOURLY
   type: MULTI_EVENT
 win_repeatedAuthFailure_thenSuccess_T1110_001:
@@ -3966,8 +3966,8 @@ win_repeatedAuthFailure_thenSuccess_T1110_001:
   enabled: false
   id: ru_cd87e5f2-bacb-4eb5-91f5-57be099f9e74
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_cd87e5f2-bacb-4eb5-91f5-57be099f9e74
-  revision_create_time: '2025-11-07T05:08:34.218719Z'
-  revision_id: v_1762492114_218719000
+  revision_create_time: '2025-11-10T12:16:39.977775Z'
+  revision_id: v_1762776999_977775000
   run_frequency: LIVE
   type: MULTI_EVENT
 win_repeatedAuthFailure_thenSuccess_T1110_001_user_asset_entity:
@@ -3978,8 +3978,8 @@ win_repeatedAuthFailure_thenSuccess_T1110_001_user_asset_entity:
   enabled: false
   id: ru_1594e455-eb58-4652-8005-d1f715a5c553
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_1594e455-eb58-4652-8005-d1f715a5c553
-  revision_create_time: '2025-11-07T05:08:25.085039Z'
-  revision_id: v_1762492105_085039000
+  revision_create_time: '2025-11-10T12:16:35.511887Z'
+  revision_id: v_1762776995_511887000
   run_frequency: LIVE
   type: MULTI_EVENT
 win_short_term_account_use:
@@ -3990,8 +3990,8 @@ win_short_term_account_use:
   enabled: false
   id: ru_50600b52-a1b0-4fcb-93d8-2f5dcba95032
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_50600b52-a1b0-4fcb-93d8-2f5dcba95032
-  revision_create_time: '2025-11-07T05:08:09.356495Z'
-  revision_id: v_1762492089_356495000
+  revision_create_time: '2025-11-10T12:16:25.651967Z'
+  revision_id: v_1762776985_651967000
   run_frequency: HOURLY
   type: MULTI_EVENT
 windows_event_log_cleared:
@@ -4002,8 +4002,8 @@ windows_event_log_cleared:
   enabled: false
   id: ru_a92b4e73-fbb2-44de-b5de-9c5d6bb558aa
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_a92b4e73-fbb2-44de-b5de-9c5d6bb558aa
-  revision_create_time: '2025-11-07T05:08:35.908719Z'
-  revision_id: v_1762492115_908719000
+  revision_create_time: '2025-11-10T12:16:41.033775Z'
+  revision_id: v_1762777001_033775000
   run_frequency: LIVE
   type: SINGLE_EVENT
 wmic_ntds_dit_T1003_003_cisa_report:
@@ -4014,7 +4014,7 @@ wmic_ntds_dit_T1003_003_cisa_report:
   enabled: false
   id: ru_7b99a880-dfc2-4dde-8b76-976fba9dd921
   resource_name: projects/383339244683/locations/asia-southeast1/instances/8a9bcdd8-288f-488c-b433-3fb2f1794b21/rules/ru_7b99a880-dfc2-4dde-8b76-976fba9dd921
-  revision_create_time: '2025-11-07T05:08:31.545231Z'
-  revision_id: v_1762492111_545231000
+  revision_create_time: '2025-11-10T12:16:38.571695Z'
+  revision_id: v_1762776998_571695000
   run_frequency: LIVE
   type: SINGLE_EVENT
